@@ -1,5 +1,6 @@
 provider "azurerm" {
   features {}
+  subscription_id = "5e47e5a1-7dc4-4abb-87a2-f371200842ea"
 }
 module "rg" {
   source   = "./modules/rg"
@@ -27,7 +28,7 @@ module "nsg" {
   resource_group_name = module.rg.name
 }
 data "azurerm_key_vault" "kv" {
-  name                = "prKeyVaulttfstate"
+  name                = "prKeyVaulttfstate1"
   resource_group_name = "tfstate-rg1"
 }
 data "azurerm_key_vault_secret" "vm_username" {
