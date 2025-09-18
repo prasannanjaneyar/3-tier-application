@@ -28,7 +28,7 @@ module "nsg" {
   resource_group_name = module.rg.name
 }
 data "azurerm_key_vault" "kv" {
-  name                = "prKeyVaulttfstate1"
+  name                = "prmyKeyVaulttfstate1"
   resource_group_name = "tfstate-rg1"
 }
 data "azurerm_key_vault_secret" "vm_username" {
